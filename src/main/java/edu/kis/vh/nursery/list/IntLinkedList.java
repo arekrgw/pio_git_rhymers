@@ -5,6 +5,10 @@ public class IntLinkedList {
 	private static final int returnError = -1;
 	private Node last;
 
+
+	/**
+	 * @param i
+	 */
 	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
@@ -15,20 +19,36 @@ public class IntLinkedList {
 		}
 	}
 
+
+	/**
+	 * @return boolean
+	 */
 	public boolean isEmpty() {
 		return last == null;
 	}
 
+
+	/**
+	 * @return boolean
+	 */
 	public boolean isFull() {
 		return false;
 	}
 
+
+	/**
+	 * @return int
+	 */
 	public int top() {
 		if (isEmpty())
 			return returnError;
 		return last.getValue();
 	}
 
+
+	/**
+	 * @return int
+	 */
 	public int pop() {
 		if (isEmpty())
 			return returnError;

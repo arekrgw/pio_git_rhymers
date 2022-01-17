@@ -9,23 +9,43 @@ public class DefaultCountingOutRhymer {
 
 	private int total = totalInitialValue;
 
+
+	/**
+	 * @return int
+	 */
 	public int getTotal() {
 		return total;
 	}
 
+
+	/**
+	 * @param in
+	 */
 	public void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 
+
+	/**
+	 * @return boolean
+	 */
 	public boolean callCheck() {
 		return total == totalInitialValue;
 	}
 
+
+	/**
+	 * @return boolean
+	 */
 	public boolean isFull() {
 		return total == size - 1;
 	}
 
+
+	/**
+	 * @return int
+	 */
 	protected int peekaboo() {
 		if (callCheck())
 			return returnError;
@@ -33,6 +53,10 @@ public class DefaultCountingOutRhymer {
 		return numbers[total];
 	}
 
+
+	/**
+	 * @return int
+	 */
 	public int countOut() {
 		if (callCheck())
 			return returnError;
